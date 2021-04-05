@@ -58,11 +58,13 @@ while True:
         aleatorio_telefone = fake.phone_number()
         aleatoria_cidade = fake.city()
         aleatorio_estado = fake.state()
+        aleatorio_endereço = fake.address()
         window['nome_aleatorio'].update(aleatorio_nome)
         window['email_aleatorio'].update(aleatorio_email)
         window['telefone_aleatorio'].update(aleatorio_telefone)
         window['cidade_aleatoria'].update(aleatoria_cidade)
         window['estado_aleatorio'].update(aleatorio_estado)
+        window['endereço_aleatorio'].update(aleatorio_endereço)
     
     try:
         if event == 'Salvar dados em um arquivo':
