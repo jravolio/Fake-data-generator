@@ -12,6 +12,7 @@ layout = [[ sg.Text('Digite o número dos dados que deseja que sejam gerados!')]
             [sg.Button('Gerar telefone aleatório',size=(20,0)), sg.Input(key= 'telefone_aleatorio', size=(40,0))],
             [sg.Button('Gerar cidade aleatória',size=(20,0)), sg.Input(key= 'cidade_aleatoria', size=(40,0))],
             [sg.Button('Gerar estado aleatório',size=(20,0)), sg.Input(key= 'estado_aleatorio', size=(40,0))],
+            [sg.Button('Gerar endereço aleatório',size=(20,0)), sg.Input(key= 'endereço_aleatorio', size=(40,0))],
             [sg.Text(size=(40,1), key= '-OUTPUT-')],
             [sg.Button('Gerar todos os dados aleatórios'), sg.Button('Salvar dados em um arquivo'), sg.Button('Sair do programa')]]
             
@@ -46,6 +47,10 @@ while True:
     elif event == 'Gerar estado aleatório':
         aleatorio_estado = fake.state()
         window['estado_aleatorio'].update(aleatorio_estado)
+    
+    elif event == 'Gerar endereço aleatório':
+        aleatorio_endereço = fake.address()
+        window['endereço_aleatorio'].update(aleatorio_endereço)
     
     elif event == 'Gerar todos os dados aleatórios':
         aleatorio_nome = fake.name()
